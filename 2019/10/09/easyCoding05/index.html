@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>(五)异常与日志 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.异常的分类 2.try代码块try-catch-finally是处理程序的三部曲.当存在try时,可以只有catch代码块,也可以只有finally代码块,就是不能单独只有try. (1)try代码块:监视代码执行过程,一旦发现异常则直接跳转至catch,如果没有catch,则直接跳转到finally. (2)catch代码块:可选执行代码块,如果没有任何异常发生则不会执行;如果发现异常则进行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(五)异常与日志">
+<meta property="og:url" content="http://example.com/2019/10/09/easyCoding05/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.异常的分类 2.try代码块try-catch-finally是处理程序的三部曲.当存在try时,可以只有catch代码块,也可以只有finally代码块,就是不能单独只有try. (1)try代码块:监视代码执行过程,一旦发现异常则直接跳转至catch,如果没有catch,则直接跳转到finally. (2)catch代码块:可选执行代码块,如果没有任何异常发生则不会执行;如果发现异常则进行">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2019/10/09/easyCoding05/easyCoding05/1.png">
+<meta property="og:image" content="http://example.com/2019/10/09/easyCoding05/easyCoding05/2.png">
+<meta property="article:published_time" content="2019-10-09T11:50:51.000Z">
+<meta property="article:modified_time" content="2019-10-09T12:23:28.928Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="EasyCoding笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2019/10/09/easyCoding05/easyCoding05/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-easyCoding05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/09/easyCoding05/" class="article-date">
+  <time datetime="2019-10-09T11:50:51.000Z" itemprop="datePublished">2019-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      (五)异常与日志
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-异常的分类"><a href="#1-异常的分类" class="headerlink" title="1.异常的分类"></a>1.异常的分类</h2><p><img src="easyCoding05/1.png" alt="异常的分类"></p>
+<h2 id="2-try代码块"><a href="#2-try代码块" class="headerlink" title="2.try代码块"></a>2.try代码块</h2><p>try-catch-finally是处理程序的三部曲.当存在try时,可以只有catch代码块,也可以只有finally代码块,就是不能单独只有try.</p>
+<p>(1)try代码块:监视代码执行过程,一旦发现异常则直接跳转至catch,如果没有catch,则直接跳转到finally.</p>
+<p>(2)catch代码块:可选执行代码块,如果没有任何异常发生则不会执行;如果发现异常则进行处理或向上抛出.这一切都在catch代码块中执行.</p>
+<p>(3)finally代码块:必须执行的代码块,不管是否有异常发生,即使发生OutOfMemoryError也会执行,通常用于处理善后清理工作.如果finally代码块没有执行,则有三种可能</p>
+<ul>
+<li>没有进入try代码块.</li>
+<li>进入try代码块,但是代码块出现了死循环或死锁状态.</li>
+<li>进入try代码块,但是执行了System.exit()操作</li>
+</ul>
+<p>注意，finally 是在 return 表达式运行后执行的 此时将要 return 的结果已经被暂 存起来, 待finally 代码块执行结束后再将之前暂存的结果返回;</p>
+<a id="more"></a>
+
+<h2 id="2-日志"><a href="#2-日志" class="headerlink" title="2.日志"></a>2.日志</h2><p>日志的主要作用是,记录操作轨迹、监控系统运行状况、回溯系统故障.</p>
+<h3 id="2-1日志规范"><a href="#2-1日志规范" class="headerlink" title="2.1日志规范"></a>2.1日志规范</h3><p>命名规范: appName_logType_logName.log</p>
+<p><strong>日志级别</strong></p>
+<ol>
+<li>DEBUG 级别日志:记录对调试程序有帮助的信息.</li>
+<li>INFO 级别日志:用来记录程序运行现场,虽然此处并未发生错误,但是对排查其它错误具有知道意义.</li>
+<li>WARN 级别日志:也可以用来记录程序运行现场,但是更偏向与表明此处有出现潜在错误的可能.</li>
+<li>ERROR 级别日志:表明当前程序运行发生了错误,需要被关注.但是当前发生的错误,没有影响系统的正常运行.</li>
+<li>FATAL 级别日志:表明当前程序出现了严重的错误事件,并且将会导致应用程序中断.</li>
+</ol>
+<p>记录日志的处方式</p>
+<ol>
+<li>预先判断日志级别 使用条件判断形式; 使用占位符形式(避免字符串拼接);</li>
+<li>避免无效日志打印 必须配置 additivity=false, 避免重复打印; 设置生命周期; 及时清理过期日志;</li>
+<li>区别对待错误日志</li>
+<li>保证记录内容完整 一定要输出异常堆栈,如 logger.error(“xxx” + e.getMessage, e); 如果输出对象实例, 确保覆写了toString();</li>
+</ol>
+<h3 id="2-2日志框架"><a href="#2-2日志框架" class="headerlink" title="2.2日志框架"></a>2.2日志框架</h3><p><img src="easyCoding05/2.png" alt="日志结构框架"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/09/easyCoding05/" data-id="ckk5bkae1000jdkgd33wg9xy4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/14/easyCoding06/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (六)数据结构与集合
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/07/easyCoding04/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">(四)JAVA GC 垃圾回收机制</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/" rel="tag">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PageHelper/" rel="tag">PageHelper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stream/" rel="tag">Stream</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">java设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssm%E9%85%8D%E7%BD%AE/" rel="tag">ssm配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81sql/" rel="tag">动态sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag">设计原则</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">EasyCoding笔记</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/PageHelper/" style="font-size: 10px;">PageHelper</a> <a href="/tags/Stream/" style="font-size: 10px;">Stream</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">java设计模式</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/ssm%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">ssm配置</a> <a href="/tags/%E5%8A%A8%E6%80%81sql/" style="font-size: 10px;">动态sql</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" style="font-size: 10px;">设计原则</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/06/Mybatis-Base/">MyBatis知识点总结(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/28/Lambda/">Lambda学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/27/Stream/">Stream流学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/18/Algorithm-summary/">算法总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

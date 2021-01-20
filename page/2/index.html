@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-easyCoding06" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/14/easyCoding06/" class="article-date">
+  <time datetime="2019-10-14T11:55:42.000Z" itemprop="datePublished">2019-10-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/14/easyCoding06/">(六)数据结构与集合</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-数据结构"><a href="#1-数据结构" class="headerlink" title="1.数据结构"></a>1.数据结构</h2><h3 id="1-1-数据结构的定义"><a href="#1-1-数据结构的定义" class="headerlink" title="1.1 数据结构的定义"></a>1.1 数据结构的定义</h3><p>数据结构是指逻辑意义上的数据组织方式及其相应的处理方式.</p>
+<p>数据组织方式:<br>树: 二叉树, 三叉树, B+ 树等;<br>图: 有向图, 无向图;<br>队列: 先进先出的线性结构;<br>哈希: 根据某种算法直接定位的数据组织方式;</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/14/easyCoding06/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/14/easyCoding06/" data-id="ckk5bkae2000kdkgdai4t6vxw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-easyCoding05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/09/easyCoding05/" class="article-date">
+  <time datetime="2019-10-09T11:50:51.000Z" itemprop="datePublished">2019-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/09/easyCoding05/">(五)异常与日志</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-异常的分类"><a href="#1-异常的分类" class="headerlink" title="1.异常的分类"></a>1.异常的分类</h2><p><img src="easyCoding05/1.png" alt="异常的分类"></p>
+<h2 id="2-try代码块"><a href="#2-try代码块" class="headerlink" title="2.try代码块"></a>2.try代码块</h2><p>try-catch-finally是处理程序的三部曲.当存在try时,可以只有catch代码块,也可以只有finally代码块,就是不能单独只有try.</p>
+<p>(1)try代码块:监视代码执行过程,一旦发现异常则直接跳转至catch,如果没有catch,则直接跳转到finally.</p>
+<p>(2)catch代码块:可选执行代码块,如果没有任何异常发生则不会执行;如果发现异常则进行处理或向上抛出.这一切都在catch代码块中执行.</p>
+<p>(3)finally代码块:必须执行的代码块,不管是否有异常发生,即使发生OutOfMemoryError也会执行,通常用于处理善后清理工作.如果finally代码块没有执行,则有三种可能</p>
+<ul>
+<li>没有进入try代码块.</li>
+<li>进入try代码块,但是代码块出现了死循环或死锁状态.</li>
+<li>进入try代码块,但是执行了System.exit()操作</li>
+</ul>
+<p>注意，finally 是在 return 表达式运行后执行的 此时将要 return 的结果已经被暂 存起来, 待finally 代码块执行结束后再将之前暂存的结果返回;</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/09/easyCoding05/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/09/easyCoding05/" data-id="ckk5bkae1000jdkgd33wg9xy4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-easyCoding04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/07/easyCoding04/" class="article-date">
+  <time datetime="2019-10-07T08:11:31.000Z" itemprop="datePublished">2019-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/07/easyCoding04/">(四)JAVA GC 垃圾回收机制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JVM内存布局"><a href="#JVM内存布局" class="headerlink" title="JVM内存布局"></a>JVM内存布局</h2><p><img src="easyCoding04/1.png" alt="JVM内存布局"></p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/07/easyCoding04/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/07/easyCoding04/" data-id="ckk5bkae0000hdkgd0kl44lsk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-easyCoding03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/07/easyCoding03/" class="article-date">
+  <time datetime="2019-10-07T02:44:01.000Z" itemprop="datePublished">2019-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/07/easyCoding03/">(三)代码风格</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="3-1-命名"><a href="#3-1-命名" class="headerlink" title="3.1 命名"></a>3.1 命名</h2><ol>
+<li>符合语言特性</li>
+<li>体现代码元素特征:<br>Abstractxxx、 Basexxxx、xxException、xxxTest等;<br>包名统一使用小写, 完整单词+点分隔符;<br>枚举类成员全大写+下划线</li>
+<li>望文生义</li>
+<li>POJO类布尔类型的变量:<br>数据库使用is_xxxx不用isXxxx,但是POJO类中属性为xxxx;</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/07/easyCoding03/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/07/easyCoding03/" data-id="ckk5bkadz000fdkgd9rcq2olm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-easyCoding02" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/06/easyCoding02/" class="article-date">
+  <time datetime="2019-10-06T11:32:26.000Z" itemprop="datePublished">2019-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/06/easyCoding02/">(二)面向对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>OOP(Object-Oriented Programming)实践了软件工程3个主要目标: 可维护性、可重用性、可扩展性</strong></p>
+<h2 id="1-OOP理念"><a href="#1-OOP理念" class="headerlink" title="1. OOP理念"></a>1. OOP理念</h2><p> <strong>(1)Object类的三大哲学问题.</strong></p>
+<ol>
+<li>我是谁? getClass()说明本质是谁,而toString()是当前职位的名片.</li>
+<li>我从哪里来? Object()构造方法是生产对象的基本步骤,clone()是繁殖对象的另一种方式.</li>
+<li>我到哪里去? finalize()是在对象销毁触发的方法.</li>
+</ol>
+<p><strong>(2) clone()方法分为浅拷贝、一般拷贝和彻底深拷贝</strong></p>
+<ul>
+<li> 浅拷贝:只复制当前对象的所有基本数据类型,以及相应的引用变量,<strong>但没有复制引用变量指向的实际对象</strong></li>
+<li> 彻底深拷贝:在成功clone一个对象后,此对象与母对象在任何引用路径上都不存在共享的实例对象,但是引用路径越深,则越接近JVM底层对象,且发现彻底深拷贝实现的难度越大.</li>
+</ul>
+<p><strong>(3)面向对象的特性</strong></p>
+<ul>
+<li>传统面向对象的三大特性: 继承、多态、封装</li>
+<li>四大特性: 继承、多态、封装、抽象</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/06/easyCoding02/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/06/easyCoding02/" data-id="ckk5bkadx000ddkgd0b7w3d05" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-easyCoding" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/06/easyCoding/" class="article-date">
+  <time datetime="2019-10-06T07:53:00.000Z" itemprop="datePublished">2019-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/06/easyCoding/">(一)计算机基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>计算机由运算器、控制器、存储器、输入设备、输出设备组成</p>
+<p>右移:&gt;&gt;<br>左移:&lt;&lt;</p>
+<h2 id="1-TCP-IP"><a href="#1-TCP-IP" class="headerlink" title="1. TCP/IP"></a>1. TCP/IP</h2><p>(Transmission Control protocol/Internet Protocol)传输控制协议/因特网互联协议</p>
+<h3 id="Tcp-Ip分层框架"><a href="#Tcp-Ip分层框架" class="headerlink" title="Tcp/Ip分层框架"></a>Tcp/Ip分层框架</h3><p><img src="easyCoding/1.jpg" alt="Tcp/Ip分层框架"></p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/06/easyCoding/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/06/easyCoding/" data-id="ckk5bkadw000bdkgd82hecxey" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javaDesignPattern02" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/03/javaDesignPattern02/" class="article-date">
+  <time datetime="2019-10-03T08:04:55.000Z" itemprop="datePublished">2019-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/03/javaDesignPattern02/">java常见三种设计模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="软件设计模式的概念与意义"><a href="#软件设计模式的概念与意义" class="headerlink" title="软件设计模式的概念与意义"></a>软件设计模式的概念与意义</h2><p>有关软件设计模式的定义很多，有些从模式的特点来说明，有些从模式的作用来说明。本教程给出的定义是大多数学者公认的，从以下两个方面来说明。<br><strong>1.软件设计模式的概念</strong><br> 软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。也就是说，它是解决特定问题的一系列套路，是前辈们的代码设计经验的总结，具有一定的普遍性，可以反复使用。其目的是为了提高代码的可重用性、代码的可读性和代码的可靠性。 </p>
+<p><strong>2.学习设计模式的意义</strong><br>设计模式的本质是面向对象设计原则的实际运用，是对类的封装性、继承性和多态性以及类的关联关系和组合关系的充分理解。正确使用设计模式具有以下优点。</p>
+<ul>
+<li>可以提高程序员的思维能力、编程能力和设计能力。</li>
+<li>使程序设计更加标准化、代码编制更加工程化，使软件开发效率大大提高，从而缩短软件的开发周期。</li>
+<li>使设计的代码可重用性高、可读性强、可靠性高、灵活性好、可维护性强。</li>
+</ul>
+<p>当然，软件设计模式只是一个引导。在具体的软件幵发中，必须根据设计的应用系统的特点和要求来恰当选择。对于简单的程序开发，苛能写一个简单的算法要比引入某种设计模式更加容易。但对大项目的开发或者框架设计，用设计模式来组织代码显然更好。<br><img src="javaDesignPattern/3.png"></p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/03/javaDesignPattern02/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/03/javaDesignPattern02/" data-id="ckk5bkae9000sdkgd3nv876m1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">java设计模式</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javaDesignPattern" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/02/javaDesignPattern/" class="article-date">
+  <time datetime="2019-10-02T05:17:00.000Z" itemprop="datePublished">2019-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/02/javaDesignPattern/">程序设计原则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="了解设计模式之前必须先了解程序的七大设计原则"><a href="#了解设计模式之前必须先了解程序的七大设计原则" class="headerlink" title="了解设计模式之前必须先了解程序的七大设计原则"></a>了解设计模式之前必须先了解程序的七大设计原则</h2><p>理解六大原则需要先了解什么是面像接口编程</p>
+<h4 id="那什么是面向接口编程？"><a href="#那什么是面向接口编程？" class="headerlink" title="那什么是面向接口编程？"></a>那什么是面向接口编程？</h4><p>面向接口编程就是先把客户的业务逻辑线提取出来,作为接口,业务具体实现通过该接口的实现来完成.</p>
+<p>当客户需求变化的时候,只需编写该业务逻辑的新的实现类,通过更改配置文件(例如Spring框架)中该接口的实现类就可以完成需求</p>
+<p>不需要修改现有的代码,减少对系统的影响. </p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/02/javaDesignPattern/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/02/javaDesignPattern/" data-id="ckk5bkae6000qdkgdfe9u5za8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag">设计原则</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ideatips" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/05/ideatips/" class="article-date">
+  <time datetime="2019-09-05T12:26:44.000Z" itemprop="datePublished">2019-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/05/ideatips/">idea使用总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="idea常用快捷键"><a href="#idea常用快捷键" class="headerlink" title="idea常用快捷键"></a>idea常用快捷键</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>执行(run)</td>
+<td>F5</td>
+</tr>
+<tr>
+<td>提示补全</td>
+<td>alt+/</td>
+</tr>
+<tr>
+<td>单行注释</td>
+<td>Ctrl+/</td>
+</tr>
+<tr>
+<td>多行注释</td>
+<td>Ctrl+Shift+/</td>
+</tr>
+<tr>
+<td>向下复制一行(dupulicate lines)</td>
+<td>ctrl+alt+down</td>
+</tr>
+<tr>
+<td>删除一行或选中一行(delete line)</td>
+<td>ctrl+d</td>
+</tr>
+<tr>
+<td>向下移动一行(move statement down)</td>
+<td>alt+down</td>
+</tr>
+<tr>
+<td>向上移动一行(move statement up</td>
+<td>alt+up</td>
+</tr>
+<tr>
+<td>向下开始新的一行(start new line)</td>
+<td>shift+enter</td>
+</tr>
+<tr>
+<td>向上开始新的一行(start new line before current)</td>
+<td>ctrl+shift+enter</td>
+</tr>
+<tr>
+<td>退回到前一个方法编辑页面(bock)</td>
+<td>alt+left</td>
+</tr>
+<tr>
+<td>进入到下一个编辑页面</td>
+<td>alt+right</td>
+</tr>
+<tr>
+<td>查看继承关系(  type hierarchy)</td>
+<td>ctrl+h</td>
+</tr>
+<tr>
+<td>查看类的继承机构图(show uml diagram)</td>
+<td>ctrl+shift+u</td>
+</tr>
+<tr>
+<td>查看方法的多层重写结构(method hierarchy)</td>
+<td>ctrl+alt+h</td>
+</tr>
+<tr>
+<td>查找方法在哪里被调用(call hierarchy)</td>
+<td>ctrl+shift+h</td>
+</tr>
+<tr>
+<td>查看类的结构</td>
+<td>ctrl+o</td>
+</tr>
+<tr>
+<td>重构：修改变量名和方法名(rename)</td>
+<td>alt+shift+r</td>
+</tr>
+<tr>
+<td>生成构造器-set-get-tostring</td>
+<td>alt+insert</td>
+</tr>
+<tr>
+<td>收起或打开所有的方法(collapse all)</td>
+<td>ctrl+shift+减号或加号</td>
+</tr>
+<tr>
+<td>生成try-catch,region区域注释等(surround with)</td>
+<td>ctrl+alt+t</td>
+</tr>
+<tr>
+<td>查找替换(当前)</td>
+<td>ctrl+f</td>
+</tr>
+<tr>
+<td>查找替换(多个)</td>
+<td>ctrl+r</td>
+</tr>
+<tr>
+<td>全局查找替换</td>
+<td>ctrl+shift+r</td>
+</tr>
+<tr>
+<td>打开最近修改的文件(Recently Files)</td>
+<td>ctrl+e</td>
+</tr>
+<tr>
+<td>快速搜索类中的错误(next highlighted error)</td>
+<td>f2</td>
+</tr>
+<tr>
+<td>提示方法参数类型(parameter info)</td>
+<td>ctrl+p</td>
+</tr>
+<tr>
+<td>添加到收藏夹(add to favorites)</td>
+<td>alt+shift+f</td>
+</tr>
+<tr>
+<td>抽取方法(extract method)</td>
+<td>ctrl+alt+m</td>
+</tr>
+<tr>
+<td>查看文档说明(quick documentation)</td>
+<td>ctrl+q</td>
+</tr>
+<tr>
+<td>大小写转换(toggle case)</td>
+<td>ctr + shift + u</td>
+</tr>
+<tr>
+<td>打开java代码所在硬盘文件夹(show in explorer)</td>
+<td>ctrl+shift+o</td>
+</tr>
+</tbody></table>
+        
+          <p class="article-more-link">
+            <a href="/2019/09/05/ideatips/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/09/05/ideatips/" data-id="ckk5bkae5000odkgdddea46w0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/idea/" rel="tag">idea</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/04/markdown/" class="article-date">
+  <time datetime="2019-08-04T14:16:11.000Z" itemprop="datePublished">2019-08-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/markdown/">markdown基本语法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。"><a href="#Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。" class="headerlink" title="Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。"></a>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</h3><h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br></pre></td></tr></table></figure>
+<p>或者在工具栏（markdownpad2）选择  </p>
+<p><img src="markdown/h.png" alt="h"> </p>
+<p>效果：</p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/04/markdown/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/08/04/markdown/" data-id="ckk5bkaeg001fdkgd5rhaebj3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/" rel="tag">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PageHelper/" rel="tag">PageHelper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stream/" rel="tag">Stream</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">java设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssm%E9%85%8D%E7%BD%AE/" rel="tag">ssm配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81sql/" rel="tag">动态sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag">设计原则</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">EasyCoding笔记</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/PageHelper/" style="font-size: 10px;">PageHelper</a> <a href="/tags/Stream/" style="font-size: 10px;">Stream</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">java设计模式</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/ssm%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">ssm配置</a> <a href="/tags/%E5%8A%A8%E6%80%81sql/" style="font-size: 10px;">动态sql</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" style="font-size: 10px;">设计原则</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/06/Mybatis-Base/">MyBatis知识点总结(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/28/Lambda/">Lambda学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/27/Stream/">Stream流学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/18/Algorithm-summary/">算法总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

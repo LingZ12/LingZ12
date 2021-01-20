@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Linux学习总结(一) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. Linux简介Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和Unix的多用户、多任务、支持多线程和多CPU的操作系统。它能运行主要的Unix工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux学习总结(一)">
+<meta property="og:url" content="http://example.com/2019/10/30/Linux01/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. Linux简介Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和Unix的多用户、多任务、支持多线程和多CPU的操作系统。它能运行主要的Unix工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2019/10/30/Linux01/Linux01/01.png">
+<meta property="og:image" content="http://example.com/2019/10/30/Linux01/Linux01/02.png">
+<meta property="og:image" content="http://example.com/2019/10/30/Linux01/Linux01/03.png">
+<meta property="og:image" content="http://example.com/2019/10/30/Linux01/Linux01/04.png">
+<meta property="og:image" content="http://example.com/2019/10/30/Linux01/Linux01/05.png">
+<meta property="article:published_time" content="2019-10-30T11:33:54.000Z">
+<meta property="article:modified_time" content="2019-11-01T08:02:49.148Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2019/10/30/Linux01/Linux01/01.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Linux01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/30/Linux01/" class="article-date">
+  <time datetime="2019-10-30T11:33:54.000Z" itemprop="datePublished">2019-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux学习总结(一)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-Linux简介"><a href="#1-Linux简介" class="headerlink" title="1. Linux简介"></a>1. Linux简介</h2><p>Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和Unix的多用户、多任务、支持多线程和多CPU的操作系统。它能运行主要的Unix工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
+<a id="more"></a>
+
+<h3 id="1-1-Linux各发行版本"><a href="#1-1-Linux各发行版本" class="headerlink" title="1.1 Linux各发行版本"></a>1.1 Linux各发行版本</h3><p><img src="Linux01/01.png" alt="Linux各发行版本"></p>
+<h3 id="1-2-Linux和Unix"><a href="#1-2-Linux和Unix" class="headerlink" title="1.2 Linux和Unix"></a>1.2 Linux和Unix</h3><p>UNIX是一个功能强大、性能全面的多用户、多任务操作系统，可以应用从巨型计算机到普通PC机等多种不同的平台上，是应用面最广、影响力最大的操作系统。<br>Linux是一种外观和性能与UNIX相同或更好的操作系统，但，Linux不源于任何版本的UNIX的源代码，并不是UNIX，而是一个类似于UNIX的产品。<br>Linux是开源代码的自由软件,UNIX是对源代码实行知识产权保护的传统商业软件.<br>UNIX系统大多是与硬件配套的,而Linux则可运行在多种硬件平台上.<br>UNIX是商业软件,而Linux是自由软件,免费、公开源代码的.UNIX(5万美圆)而Linux免费<br>UNIX是命令行下的系统 linux是加了窗体管理的系统<br>在对硬件的要求上,linux比unix要低,没有unix那么苛刻.在安装上linux比unix容易掌握. </p>
+<h2 id="2-Linux目录结构"><a href="#2-Linux目录结构" class="headerlink" title="2. Linux目录结构"></a>2. Linux目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行输入 ls</span><br></pre></td></tr></table></figure>
+<p><img src="Linux01/02.png"><br>树状目录结构<br><img src="Linux01/03.png"></p>
+<h3 id="2-1-各文件夹说明"><a href="#2-1-各文件夹说明" class="headerlink" title="2.1 各文件夹说明"></a>2.1 各文件夹说明</h3><table>
+<thead>
+<tr>
+<th>目录名</th>
+<th>内容说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bin</td>
+<td>存放二进制的可执行程序</td>
+</tr>
+<tr>
+<td>boot</td>
+<td>存放用于系统引导时使用的各种文件</td>
+</tr>
+<tr>
+<td>dev</td>
+<td>用于存放设备文件,用户可以通过这些文件访问外部设备</td>
+</tr>
+<tr>
+<td>etc</td>
+<td>存放系统的配置文件</td>
+</tr>
+<tr>
+<td>home</td>
+<td>存放所有用户文件的目录,每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的</td>
+</tr>
+<tr>
+<td>lib/lib64</td>
+<td>存放根文件系统中的程序运行所需要的共享文件库及内核模块</td>
+</tr>
+<tr>
+<td>lost+found</td>
+<td>通常为空,当系统非法关机后,这里就存放了一些文件</td>
+</tr>
+<tr>
+<td>mnt</td>
+<td>临时文件系统的挂载点目录</td>
+</tr>
+<tr>
+<td>media</td>
+<td>即插即用存储设备的挂载自动在这个目录下创建,例如u盘、光驱等</td>
+</tr>
+<tr>
+<td>opt</td>
+<td>第三方软件的存放目录</td>
+</tr>
+<tr>
+<td>proc</td>
+<td>是一个虚拟文件系统,存放当前内存的映射,主要用于在不重启机器的情况下管理内核</td>
+</tr>
+<tr>
+<td>root</td>
+<td>超级用户目录</td>
+</tr>
+<tr>
+<td>sbin</td>
+<td>类bin目录,也存放二进制可执行文件,但只有root才能访问</td>
+</tr>
+<tr>
+<td>srv</td>
+<td>系统对外提供服务的目录,如web虚拟机主机等</td>
+</tr>
+<tr>
+<td>tmp</td>
+<td>用于放置各种临时文件</td>
+</tr>
+<tr>
+<td>usr</td>
+<td>用于存放系统应用程序</td>
+</tr>
+<tr>
+<td>var</td>
+<td>用于存放需要随时改变的文件,如系统日志、脱机工作目录等</td>
+</tr>
+</tbody></table>
+<h3 id="2-2文件目录操作命令"><a href="#2-2文件目录操作命令" class="headerlink" title="2.2文件目录操作命令"></a>2.2文件目录操作命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ls</td>
+<td>显示文件和目录列表</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前工作目录</td>
+</tr>
+<tr>
+<td>touch</td>
+<td>生成一个空文件或更改文件的时间</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>切换目录</td>
+</tr>
+<tr>
+<td>cp</td>
+<td>复制文件或目录</td>
+</tr>
+<tr>
+<td>find</td>
+<td>在文件系统中查找指定的文件</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>移动文件或目录</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建目录</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除文件</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除空目录</td>
+</tr>
+<tr>
+<td>ln</td>
+<td>建立链接文件</td>
+</tr>
+<tr>
+<td>tree</td>
+<td>显示目录树</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-文本文件操作命令"><a href="#2-3-文本文件操作命令" class="headerlink" title="2.3 文本文件操作命令"></a>2.3 文本文件操作命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat、tac</td>
+<td>显示文本文件内容</td>
+</tr>
+<tr>
+<td>more、less</td>
+<td>分页显示文本文件内容</td>
+</tr>
+<tr>
+<td>head、tail</td>
+<td>显示文本文件的前若干行或后若干行</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>纵向切割出文本指定的部分</td>
+</tr>
+<tr>
+<td>paste</td>
+<td>纵向合并多个文本</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>按关键字抽取匹配的行</td>
+</tr>
+<tr>
+<td>wc</td>
+<td>文本数据统计</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>以行为单位对文本文件排序</td>
+</tr>
+<tr>
+<td>uniq</td>
+<td>删除文本文件中联系你重复的行</td>
+</tr>
+<tr>
+<td>diff</td>
+<td>显示两个文本文件的差异</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>将文件中的制表符转换为空格</td>
+</tr>
+<tr>
+<td>unexpand</td>
+<td>将文件中的空格转换为制表符</td>
+</tr>
+<tr>
+<td>dos2unix</td>
+<td>将DOS格式的文本转换为UNIX格式</td>
+</tr>
+<tr>
+<td>unix2dos</td>
+<td>将UNIX格式的文本转换成DOS格式</td>
+</tr>
+<tr>
+<td>iconv</td>
+<td>将文本从一种编码转换成另一种编码</td>
+</tr>
+<tr>
+<td>tr</td>
+<td>转换字符</td>
+</tr>
+<tr>
+<td>sed</td>
+<td>流编辑器</td>
+</tr>
+<tr>
+<td>awk</td>
+<td>awk是一种用于处理文本的编辑语言工具</td>
+</tr>
+</tbody></table>
+<h3 id="2-4-解压与压缩文件"><a href="#2-4-解压与压缩文件" class="headerlink" title="2.4 解压与压缩文件"></a>2.4 解压与压缩文件</h3><p>tar<br>-c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件</p>
+<p>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。</p>
+<p>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出</p>
+<p>下面的参数-f是必须的</p>
+<p>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
+<pre><code># tar -cf all.tar *.jpg</code></pre>
+<p>这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</p>
+<pre><code># tar -rf all.tar *.gif</code></pre>
+<p>这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</p>
+<pre><code># tar -uf all.tar logo.gif</code></pre>
+<p>这条命令是更新原来tar包all.tar中logo.gif文件，-u是表示更新文件的意思。</p>
+<pre><code># tar -tf all.tar</code></pre>
+<p>这条命令是列出all.tar包中所有文件，-t是列出文件的意思</p>
+<pre><code># tar -xf all.tar</code></pre>
+<p>这条命令是解出all.tar包中所有文件，-t是解开的意思</p>
+<p>压缩</p>
+<p>tar -cvf jpg.tar *.jpg //将目录里所有jpg文件打包成tar.jpg </p>
+<p>tar -czf jpg.tar.gz *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz</p>
+<p>tar -cjf jpg.tar.bz2 *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2</p>
+<p>tar -cZf jpg.tar.Z *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z</p>
+<p>rar a jpg.rar *.jpg //rar格式的压缩，需要先下载rar for linux</p>
+<p>zip jpg.zip *.jpg //zip格式的压缩，需要先下载zip for linux</p>
+<p>解压</p>
+<p>tar -xvf file.tar //解压 tar包</p>
+<p>tar -xzvf file.tar.gz //解压tar.gz</p>
+<p>tar -xjvf file.tar.bz2   //解压 tar.bz2</p>
+<p>tar -xZvf file.tar.Z   //解压tar.Z</p>
+<p>unrar e file.rar //解压rar</p>
+<p>unzip file.zip //解压zip</p>
+<h2 id="3-Vi-Vim"><a href="#3-Vi-Vim" class="headerlink" title="3. Vi/Vim"></a>3. Vi/Vim</h2><p>所有的 Unix Like 系统都会内建 vi 文书编辑器，其他的文书编辑器则不一定会存在。<br>但是目前我们使用比较多的是 vim 编辑器。<br>vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的正确性，方便程序设计。</p>
+<p><img src="Linux01/04.png" alt="vi/vim键盘图"></p>
+<h3 id="3-vi-vim-的使用"><a href="#3-vi-vim-的使用" class="headerlink" title="3.vi/vim 的使用"></a>3.vi/vim 的使用</h3><p>基本上 vi/vim 共分为三种模式，分别是普通模式（Normal mode），输入模式（Insert mode）和命令模式（Last line mode）。</p>
+<p><img src="Linux01/05.png" alt="vi/vim工作模式"></p>
+<p>普通模式常用命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能普通</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>移动相关</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>0或功能键[Home]</td>
+<td>数字『 0 』(不是小键盘的数字0)：移动到这一行的最前面字符处</td>
+</tr>
+<tr>
+<td>$ 或功能键[End]</td>
+<td>移动到这一行的最后面字符处</td>
+</tr>
+<tr>
+<td>G</td>
+<td>移动到这个档案的最后一行</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>移动到这个档案的第一行</td>
+</tr>
+<tr>
+<td><strong>搜索相关</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>/word</td>
+<td>向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！</td>
+</tr>
+<tr>
+<td>:n1,n2s/word1/word2/g</td>
+<td>n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：『:100,200s/vbird/VBIRD/g』。</td>
+</tr>
+<tr>
+<td>:1,$s/word1/word2/g 或 :%s/word1/word2/g</td>
+<td>从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！</td>
+</tr>
+<tr>
+<td><strong>复制粘贴</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>x, X</td>
+<td>在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键)</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除游标所在的那一整行</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td>n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制游标所在的那一行</td>
+</tr>
+<tr>
+<td>nyy</td>
+<td>n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行</td>
+</tr>
+<tr>
+<td>p, P</td>
+<td>p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！</td>
+</tr>
+<tr>
+<td>u</td>
+<td>复原前一个动作。</td>
+</tr>
+<tr>
+<td>[Ctrl]+r</td>
+<td>重做上一个动作。</td>
+</tr>
+<tr>
+<td>ZZ</td>
+<td>存盘退出</td>
+</tr>
+<tr>
+<td>ZQ</td>
+<td>不保存退出</td>
+</tr>
+</tbody></table>
+<p>命令模式常用指令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:w</td>
+<td>将编辑的数据写入硬盘档案中</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>离开 vi ; :!强制离开不保存</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td>储存后离开，若为 :!wq 则为强制储存后离开</td>
+</tr>
+</tbody></table>
+<h2 id="4-yum-命令"><a href="#4-yum-命令" class="headerlink" title="4. yum 命令"></a>4. yum 命令</h2><p>yum（ Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。</p>
+<p>基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</p>
+<p>yum提供了查找、安装、删除某一个、一组甚至全部软件包的命令，而且命令简洁而又好记。</p>
+<h3 id="4-1-yum常用命令"><a href="#4-1-yum常用命令" class="headerlink" title="4.1 yum常用命令"></a>4.1 yum常用命令</h3><ul>
+<li>列出所有可更新的软件清单命令：yum check-update</li>
+<li>更新所有软件命令：yum update</li>
+<li>仅安装指定的软件命令：yum install <package_name></li>
+<li>仅更新指定的软件命令：yum update <package_name></li>
+<li>列出所有可安裝的软件清单命令：yum list</li>
+<li>删除软件包命令：yum remove <package_name></li>
+<li>查找软件包 命令：yum search <keyword></li>
+<li>清除缓存命令:<ul>
+<li>yum clean packages: 清除缓存目录下的软件包</li>
+<li>yum clean headers: 清除缓存目录下的 headers</li>
+<li>yum clean oldheaders: 清除缓存目录下旧的 headers </li>
+<li>yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/30/Linux01/" data-id="ckk5bkadq0003dkgddxj97krh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/18/Algorithm-summary/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          算法总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/21/ssm-configuration/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SSM配置文件总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/" rel="tag">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PageHelper/" rel="tag">PageHelper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stream/" rel="tag">Stream</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">java设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssm%E9%85%8D%E7%BD%AE/" rel="tag">ssm配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81sql/" rel="tag">动态sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag">设计原则</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">EasyCoding笔记</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/PageHelper/" style="font-size: 10px;">PageHelper</a> <a href="/tags/Stream/" style="font-size: 10px;">Stream</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">java设计模式</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/ssm%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">ssm配置</a> <a href="/tags/%E5%8A%A8%E6%80%81sql/" style="font-size: 10px;">动态sql</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" style="font-size: 10px;">设计原则</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/06/Mybatis-Base/">MyBatis知识点总结(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/28/Lambda/">Lambda学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/27/Stream/">Stream流学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/18/Algorithm-summary/">算法总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Mybatis-Pagehelper使用总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、导入依赖12345&lt;dependency&gt;	&lt;groupId&gt;com.github.pagehelper&lt;&#x2F;groupId&gt;	&lt;artifactId&gt;pagehelper&lt;&#x2F;artifactId&gt;	&lt;version&gt;5.1.2&lt;&#x2F;version&gt; &lt;&#x2F;depende">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mybatis-Pagehelper使用总结">
+<meta property="og:url" content="http://example.com/2019/10/17/Mybatis-Pagehelper/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、导入依赖12345&lt;dependency&gt;	&lt;groupId&gt;com.github.pagehelper&lt;&#x2F;groupId&gt;	&lt;artifactId&gt;pagehelper&lt;&#x2F;artifactId&gt;	&lt;version&gt;5.1.2&lt;&#x2F;version&gt; &lt;&#x2F;depende">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2019/10/17/Mybatis-Pagehelper/Mybatis-Pagehelper/01.png">
+<meta property="article:published_time" content="2019-10-17T09:38:19.000Z">
+<meta property="article:modified_time" content="2019-10-20T10:17:12.911Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Mybatis">
+<meta property="article:tag" content="PageHelper">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2019/10/17/Mybatis-Pagehelper/Mybatis-Pagehelper/01.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Mybatis-Pagehelper" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/17/Mybatis-Pagehelper/" class="article-date">
+  <time datetime="2019-10-17T09:38:19.000Z" itemprop="datePublished">2019-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mybatis-Pagehelper使用总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、导入依赖"><a href="#一、导入依赖" class="headerlink" title="一、导入依赖"></a>一、导入依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.github.pagehelper&lt;&#x2F;groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;pagehelper&lt;&#x2F;artifactId&gt;</span><br><span class="line">	&lt;version&gt;5.1.2&lt;&#x2F;version&gt; </span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><h3 id="1-XML配置"><a href="#1-XML配置" class="headerlink" title="1.XML配置"></a>1.XML配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id&#x3D;&quot;sqlSessionFactory&quot; class&#x3D;&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</span><br><span class="line">&lt;property name&#x3D;&quot;dataSource&quot; ref&#x3D;&quot;dataSource&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">&lt;!--配置mybatis 插件--&gt;</span><br><span class="line">&lt;property name&#x3D;&quot;plugins&quot;&gt;</span><br><span class="line">    &lt;set&gt;</span><br><span class="line">        &lt;!--配置pageHelper 分页插件--&gt;</span><br><span class="line">        &lt;bean class&#x3D;&quot;com.github.pagehelper.PageInterceptor&quot;&gt;</span><br><span class="line">            &lt;property name&#x3D;&quot;properties&quot;&gt;</span><br><span class="line">                &lt;props&gt;</span><br><span class="line">                    &lt;!--方言：--&gt;</span><br><span class="line">                    &lt;prop key&#x3D;&quot;helperDialect&quot;&gt;mysql&lt;&#x2F;prop&gt;</span><br><span class="line">                &lt;&#x2F;props&gt;</span><br><span class="line">            &lt;&#x2F;property&gt;</span><br><span class="line">        &lt;&#x2F;bean&gt;</span><br><span class="line">    &lt;&#x2F;set&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-java配置"><a href="#2-java配置" class="headerlink" title="2.java配置"></a>2.java配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * mybatis分页插件配置</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Configuration</span><br><span class="line">public class MyBatisConfig &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public PageHelper pageHelper()&#123;</span><br><span class="line">        PageHelper pageHelper &#x3D; new PageHelper();</span><br><span class="line">        Properties p &#x3D; new Properties();</span><br><span class="line">        &#x2F;&#x2F; 设置为true时，会将RowBounds第一个参数offset当成pageNum页码使用</span><br><span class="line">        p.setProperty(&quot;offsetAsPageNum&quot;,&quot;true&quot;);</span><br><span class="line">        &#x2F;&#x2F;设置为true时，使用RowBounds分页会进行count查询</span><br><span class="line">        p.setProperty(&quot;rowBoundsWithCount&quot;,&quot;true&quot;);</span><br><span class="line">        p.setProperty(&quot;reasonable&quot;,&quot;true&quot;);</span><br><span class="line">        pageHelper.setProperties(p);</span><br><span class="line">        return pageHelper;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、方法调用"><a href="#三、方法调用" class="headerlink" title="三、方法调用"></a>三、方法调用</h2><p>通过使用<br>PageHelper.startPage(page,pageSize)<br>PageInfo pageInfo = new PageInfo(list)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public PageInfo findPage(int page,int pageSize)&#123;</span><br><span class="line">  PageHelper.startPage(page,pageSize);</span><br><span class="line">  List&lt;Company&gt; List&#x3D;companyDao.selectAll();</span><br><span class="line">  PageInfo pageInfo &#x3D; new PageInfo(list);</span><br><span class="line">  return pageInfo;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、PageHepler分页流程"><a href="#四、PageHepler分页流程" class="headerlink" title="四、PageHepler分页流程"></a>四、PageHepler分页流程</h2><p><img src="Mybatis-Pagehelper/01.png"></p>
+<h2 id="五、PageInfo实体类属性"><a href="#五、PageInfo实体类属性" class="headerlink" title="五、PageInfo实体类属性"></a>五、PageInfo实体类属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">public class PageInfo&lt;T&gt; implements Serializable &#123;</span><br><span class="line"></span><br><span class="line">    private static final long serialVersionUID &#x3D; 1L;</span><br><span class="line">    &#x2F;&#x2F;当前页</span><br><span class="line">    private int pageNum;</span><br><span class="line">    &#x2F;&#x2F;每页的数量</span><br><span class="line">    private int pageSize;</span><br><span class="line">    &#x2F;&#x2F;当前页的数量</span><br><span class="line">    private int size;</span><br><span class="line">    &#x2F;&#x2F;排序</span><br><span class="line">    private String orderBy;</span><br><span class="line">    &#x2F;&#x2F;由于startRow和endRow不常用，这里说个具体的用法</span><br><span class="line">    &#x2F;&#x2F;可以在页面中&quot;显示startRow到endRow 共size条数据&quot;</span><br><span class="line">    &#x2F;&#x2F;当前页面第一个元素在数据库中的行号</span><br><span class="line">    private int startRow;</span><br><span class="line">    &#x2F;&#x2F;当前页面最后一个元素在数据库中的行号</span><br><span class="line">    private int endRow;</span><br><span class="line">    &#x2F;&#x2F;总记录数</span><br><span class="line">    private long total;</span><br><span class="line">    &#x2F;&#x2F;总页数</span><br><span class="line">    private int pages;</span><br><span class="line">    &#x2F;&#x2F;结果集</span><br><span class="line">    private List&lt;T&gt; list;</span><br><span class="line">    &#x2F;&#x2F;第一页</span><br><span class="line">    private int firstPage;</span><br><span class="line">    &#x2F;&#x2F;前一页</span><br><span class="line">    private int prePage;</span><br><span class="line">    &#x2F;&#x2F;下一页</span><br><span class="line">    private int nextPage;</span><br><span class="line">    &#x2F;&#x2F;最后一页</span><br><span class="line">    private int lastPage;</span><br><span class="line">    &#x2F;&#x2F;是否为第一页</span><br><span class="line">    private boolean isFirstPage &#x3D; false;</span><br><span class="line">    &#x2F;&#x2F;是否为最后一页</span><br><span class="line">    private boolean isLastPage &#x3D; false;</span><br><span class="line">    &#x2F;&#x2F;是否有前一页</span><br><span class="line">    private boolean hasPreviousPage &#x3D; false;</span><br><span class="line">    &#x2F;&#x2F;是否有下一页</span><br><span class="line">    private boolean hasNextPage &#x3D; false;</span><br><span class="line">    &#x2F;&#x2F;导航页码数</span><br><span class="line">    private int navigatePages;</span><br><span class="line">    &#x2F;&#x2F;所有导航页号</span><br><span class="line">    private int[] navigatepageNums;</span><br><span class="line"></span><br><span class="line">	....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/17/Mybatis-Pagehelper/" data-id="ckk5bkads0005dkgdbwem5k5n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PageHelper/" rel="tag">PageHelper</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/18/Mybatis-Provider/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Mybatis-动态sql-XML与注解方式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/16/easyCoding07/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">(七)并发与多线程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" rel="tag">EasyCoding笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/" rel="tag">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PageHelper/" rel="tag">PageHelper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stream/" rel="tag">Stream</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">java设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssm%E9%85%8D%E7%BD%AE/" rel="tag">ssm配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81sql/" rel="tag">动态sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag">设计原则</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/EasyCoding%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">EasyCoding笔记</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/PageHelper/" style="font-size: 10px;">PageHelper</a> <a href="/tags/Stream/" style="font-size: 10px;">Stream</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">java设计模式</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/ssm%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">ssm配置</a> <a href="/tags/%E5%8A%A8%E6%80%81sql/" style="font-size: 10px;">动态sql</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" style="font-size: 10px;">设计原则</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/06/Mybatis-Base/">MyBatis知识点总结(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/28/Lambda/">Lambda学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/27/Stream/">Stream流学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/18/Algorithm-summary/">算法总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
